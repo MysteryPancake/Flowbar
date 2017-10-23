@@ -1,7 +1,7 @@
 hook.Add( "DoAnimationEvent", "Flowbar", function( ply )
 
 	local vm = ply:GetViewModel()
-
+	if not IsValid( vm ) then return end
 	if not string.find( vm:GetModel(), "crowbar" ) then return end
 
 	local seq = vm:GetSequence()
