@@ -14,7 +14,7 @@ hook.Add( "DoAnimationEvent", "Flowbar", function( ply )
 
 	local found = false
 	for _, model in ipairs( models ) do
-		local enabled = tobool( ply:GetInfoNum( "flowbar_" .. model, 0 ) )
+		local enabled = tobool( ply:GetInfo( "flowbar_" .. model ) )
 		if enabled and string.find( vm:GetModel(), model ) then
 			found = true
 		end
